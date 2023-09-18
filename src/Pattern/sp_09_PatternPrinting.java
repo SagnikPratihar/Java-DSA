@@ -1,4 +1,4 @@
-package PW;
+package Pattern;
 
 import java.util.Scanner;
 
