@@ -1,6 +1,9 @@
 package Array;
 
+import java.util.Scanner;
+
 public class Arrays4 {
+
     static void printArray(int []arr){
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
@@ -74,7 +77,37 @@ public class Arrays4 {
         }
         return ans;
     }
+
+    //Q5
+    static void reverse(int[] arr,int st,int end){
+        int i=0, j=arr.length-1;
+        while(i<j){
+            swapInArray(arr,i,j);
+            i++;
+            j--;
+        }
+    }
+
+    static void rotateInPlace(int []arr,int k){
+        int n=arr.length;
+        k=k%n;
+        reverse(arr, 0 ,n-k-1);
+        reverse(arr, n-k ,n-1);
+        reverse(arr, 0 ,n-1);
+
+    }
+
+    //Q6
+    static int[] makeFrequencyArray(int[] arr){
+        int[] freq=new int[100005];
+        for(int i=0;i<arr.length;i++){
+            freq[arr[i]]++;
+        }
+        return freq;
+    }
+
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
 
         //Q1
         //Given 2 integers a and b. Swap the 2 given values using temporary variables.
@@ -115,8 +148,25 @@ public class Arrays4 {
         //Rotate the given array ‘g’ by k steps, where k is non-negative without using extra space.
         //Note: k can be greater than n as well.
         int []g = {1,2,3,4,5};
-        int l = 4;
-        
+        int l = 1;
+        rotateInPlace(g,l);
+        printArray(g);
+
+
+        //Q6
+        //Given Q queries, check if the given number is present in the array or not.
+        //Note: Values of all the elements in the array is less than 10 to the power 5.
+        int []h={5,6,5,400,560,1000,400};
+        int q=5; //Numbers of queries.
+        //Frequency array//
+        int[] freq=makeFrequencyArray(h);
+        while(q>0){
+            System.out.print("Enter number to be searched : ");
+            int x=sc.nextInt();
+            if(freq[x]>0) System.out.println("Yes");
+            else System.out.println("No");
+            q--;
+        }
 
 
     }
