@@ -109,6 +109,7 @@ public class Practice {
 
 
         //Q7
-        //Find the k'th smallest and the largest element of an array.
+        //Find the kth smallest and the largest element of an array.
+
     }
 }

@@ -86,5 +86,9 @@ public class PrefixSum {
         int[] c1={1,1,1,1,1,1};
         System.out.println("Equal partition possible : "+equalSumPartition(c1));
 
+
+        //Q4
+        //Find suffix sum of a given array.
+
     }
 }
