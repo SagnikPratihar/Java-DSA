@@ -1,6 +1,6 @@
 package Array;
 
-public class TwoPointersApproch {
+public class TwoPointersApproach {
 
     static void printArray(int []arr){
         for(int i=0;i<arr.length;i++){

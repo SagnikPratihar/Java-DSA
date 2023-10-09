@@ -101,8 +101,23 @@ public class TargetSumProblem {
     }
 
     //7
+    static int findMin(int []arr){
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+        return min;
+    }
     static int secondSmallestNumber(int []arr){
-        return 3;
+        int mi=findMin(arr);
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==mi){
+                arr[i]=Integer.MAX_VALUE;
+            }
+        }
+        return findMin(arr);
     }
     public static void main(String[] args) {
         //Q1
@@ -147,6 +162,7 @@ public class TargetSumProblem {
         //Find the second-smallest number in the given array.
         int []g ={1,2,6,5,9,4};
 
+        System.out.println(secondSmallestNumber(g));
 
 
     }

@@ -52,7 +52,6 @@ public class ps_2DArray_2 {
             //top row -> left column to right column
             for(int j=leftColumn;j<=rightColumn && current<=n*n;j++){
                 matrix[topRow][j]=current++;
-
             }
             topRow++;
             //right column -> top row to bottom row
@@ -99,5 +98,9 @@ public class ps_2DArray_2 {
         int n=sc.nextInt();
         int[][] matrix=generateSpiral(n);
         printArray(matrix);
+
+
+        //Q3
+        //
     }
 }
