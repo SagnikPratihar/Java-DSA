@@ -3,31 +3,30 @@ package Recursion;
 import java.util.Scanner;
 
 public class Recursion1 {
-
-    //Program to write natural numbers from 1 to n using recursion
-    static void printIncreasing(int n){
-        if(n==1){                //Halting Condition or base case
-            System.out.println(1);
-            return;
+    //Factorial
+    public static int fac(int n){
+        if(n==0){
+            return 1;
         }
-        printIncreasing(n-1);    //smaller or sub problem
-        System.out.println(n);      //self-work
+        return n*fac(n-1);
     }
-
-
-    //Program to write natural numbers from n to 1 using recursion
-    static void printDecreasing(int n){
-        if(n==1){
-            System.out.println(1);
-            return;
+    //Fibonacci 
+    public static int fib(int n){
+        if(n==0 || n==1){
+            return n;
         }
-        System.out.println(n);
-        printDecreasing(n-1);
+        return fib(n-1)+fib(n-2);
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        printIncreasing(n);
-        printDecreasing(n);
+        //Finding factorial of n numbers using recursion.
+        System.out.println(fac(5));
+
+
+        //Fibonacci Number
+        System.out.println(fib(6));
+
+
     }
 }
