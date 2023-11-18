@@ -1,7 +1,6 @@
 package Array;
 
-import java.util.*;
-public class ArrayList {
+public class ArrayList<S> {
     public static void main(String[] args) {
         //Wrapper Class
         Integer i = Integer.valueOf(4);
@@ -25,5 +24,8 @@ public class ArrayList {
         //if you don't specify class, you can put anything inside that array
 
 
+    }
+
+    public void add(String space) {
     }
 }
