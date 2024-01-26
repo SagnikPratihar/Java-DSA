@@ -1,10 +1,13 @@
 package Recursion;
 
 public class PermutationOfString {
-    static void swap(String s,int l,int r){
-        String temp= String.valueOf(s.charAt(l));
-        s.charAt(l)=s.charAt(r);
-        s.charAt(r)=temp;
+    static String swap(String str,int i,int j){
+        char ch[] = str.toCharArray();
+        char temp = ch[i];
+        ch[i] = ch[j];
+        ch[j] = temp;
+        String s = new String(ch);
+        return s;
     }
     static void permu(String s,int l,int r){
         if (l==r) {
@@ -12,12 +15,13 @@ public class PermutationOfString {
             return;
         }
         for (int i=l;i<=r;i++) {
-            s = swap(s, l, r);
+           s= swap(s, l, r);
             permu(s, l, r);
-            s = swap(s, l, r);
+            s= swap(s, l, r);
         }
     }
     public static void main(String[] args) {
         String s="abc";
+        permu(s,0,s.length()-1);
     }
 }

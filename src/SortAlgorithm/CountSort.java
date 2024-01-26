@@ -18,6 +18,7 @@ public class CountSort {
     static void basicCountSort(int[] arr){
         int max=findMax(arr);
         int[] count=new int[max+1];
+        //Making frequency array
         for (int i=0;i<arr.length;i++){
             count[arr[i]]++;
         }
@@ -36,24 +37,26 @@ public class CountSort {
         int []output=new int[n];
         int max=findMax(arr);
         int[] count=new int[max+1];
-        for (int i=0;i<arr.length;i++){ //Making frequency array
+
+        //Making frequency array
+        for (int i=0;i<arr.length;i++){   //TC -> n
             count[arr[i]]++;
         }
 
         //Make prefix sum array of count array
-        for(int i=1;i<count.length;i++){
+        for(int i=1;i<count.length;i++){  //Tc -> max
             count[i]+=count[i-1];
         }
 
         //Find the index of each element in the original array and put it in output array
-        for (int i=n-1;i>=0;i--){
+        for (int i=n-1;i>=0;i--){   //TC -> n
             int idx=count[arr[i]]-1;
             output[idx]=arr[i];
             count[arr[i]]--;
         }
 
         //Copy all elements of output to arr
-        for (int i=0;i<n;i++){
+        for (int i=0;i<n;i++){   //TC -> n
             arr[i]=output[i];
         }
 

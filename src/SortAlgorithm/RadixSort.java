@@ -48,7 +48,7 @@ public class RadixSort {
         //Get maximum element
         int max = findMax(arr);
         //Apply counting sort to sort elements based on place value.
-        for (int place=1;max/place>0;place+=10){
+        for (int place=1;max/place>0;place*=10){
             countSort(arr,place);
         }
     }

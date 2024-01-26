@@ -1,6 +1,6 @@
-package SortAlgorithm;
+package String;
 
-public class PS2 {
+public class stringBasics {
     public static void main(String[] args) {
         
     }
