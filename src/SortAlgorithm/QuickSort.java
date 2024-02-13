@@ -12,24 +12,24 @@ public class QuickSort {
         arr[y]=temp;
     }
     static int partition(int[] arr,int st,int end){
-        int pivot=arr[st];
-        int count=0;
-        for (int i=st+1;i<end;i++){
-            if (arr[i]<=pivot) count++;
+        int pivot = arr[st];
+        int cnt = 0;
+        for(int i = st+1; i <= end; i++){
+            if(arr[i] <= pivot) cnt++;
         }
-        int pivotIndex=st+count;
-        swap(arr,st,pivotIndex);
-        int i=st,j=end;
-        while(i<pivotIndex && j>pivotIndex){
-            while (arr[i]<=pivot) i++;
-            while(arr[j]>pivot) j--;
-            if (i<pivotIndex && j>pivotIndex){
-                swap(arr,i,j);
+        int pivotIdx = st + cnt;
+        swap(arr, st, pivotIdx);
+        int i = st, j = end;
+        while(i < pivotIdx && j > pivotIdx){
+            while (arr[i] <= pivot) i++;
+            while (arr[j] > pivot) j--;
+            if(i < pivotIdx && j > pivotIdx){
+                swap(arr, i, j);
                 i++;
                 j--;
             }
         }
-        return pivotIndex;
+        return pivotIdx;
     }
     static void quickSort(int []arr,int st,int end){
         if (st>=end) return;
@@ -39,7 +39,7 @@ public class QuickSort {
     }
     public static void main(String[] args) {
 
-        int[] arr={2,5,2,4,8,7,9};
+        int[] arr={4,1,3,9,7};
         System.out.println("Array before sorting");
         displayArray(arr);
         System.out.println();

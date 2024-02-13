@@ -1,11 +1,12 @@
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
-public class practice {
+class practice {
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
 
-    }
-}
+
+
+     }
+
+ }
