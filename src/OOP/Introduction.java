@@ -24,7 +24,7 @@ class Introduction {
 //        kunal = new Student();
 
         Student kunal = new Student(15, "Kunal Kushwaha", 85.4f);
-        Student rahul = new Student(18, "Rahul Rana", 90.3f);
+        Student sagnik = new Student(18, "Sagnik Pratihar", 90.3f);
 
 //        kunal.rno = 13;
 //        kunal.name = "Kunal Kushwaha";

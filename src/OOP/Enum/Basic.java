@@ -1,7 +1,7 @@
 package OOP.Enum;
 
 public class Basic {
-    enum Week implements A{
+    enum Week implements A {
         Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
         // these are enum constants
         // public, static and final
@@ -37,4 +37,5 @@ public class Basic {
 //        }
 
 //        System.out.println(week.ordinal());
+    }
 }
