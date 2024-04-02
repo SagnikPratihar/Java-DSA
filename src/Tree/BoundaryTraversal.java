@@ -15,14 +15,13 @@ public class BoundaryTraversal {
     }
     static void addRightBoundary(Node root, ArrayList < Integer > res) {
         Node cur = root.right;
-        ArrayList < Integer > tmp = new ArrayList < Integer > ();
+        ArrayList < Integer > tmp = new ArrayList <> ();
         while (cur != null) {
             if (!isLeaf(cur)) tmp.add(cur.data);
             if (cur.right != null) cur = cur.right;
             else cur = cur.left;
         }
-        int i;
-        for (i = tmp.size() - 1; i >= 0; --i) {
+        for (int i = tmp.size() - 1; i >= 0; --i) {
             res.add(tmp.get(i));
         }
     }

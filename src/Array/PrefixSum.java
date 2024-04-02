@@ -65,7 +65,8 @@ public class PrefixSum {
 
 
         //Q2*
-        //Given an array of integers of size n. Answer q queries where you need to print the sum of values in a given range of indices from l to r (both including).
+        //Given an array of integers of size n. Answer q queries where you need to print the sum of values in
+        // a given range of indices from l to r (both including).
         //Note: The values of l and r in queries follow 1-based indexing.
         int[] b={1,2,3,4,5,6};
         int q=2;
@@ -81,7 +82,8 @@ public class PrefixSum {
 
 
         //Q3
-        //Check if we can partition the array into two sub-arrays with equal sum. More formally, check that the prefix sum of a part of the array is equal to the suffix sum of the rest of the array.
+        //Check if we can partition the array into two sub-arrays with equal sum. More formally, check that
+        // the prefix sum of a part of the array is equal to the suffix sum of the rest of the array.
         int []c={5,3,2,6,3,1};
         int[] c1={1,1,1,1,1,1};
         System.out.println("Equal partition possible : "+equalSumPartition(c1));
