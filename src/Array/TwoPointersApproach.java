@@ -126,7 +126,9 @@ public class TwoPointersApproach {
 
 
         //Q2
-        //Given an array of integers 'b', move all the even integers at the beginning of the array followed by all the odd integers. The relative order of odd or even integers does not matter. Return any array that satisfies the condition.
+        //Given an array of integers 'b', move all the even integers at the beginning of the array followed by all
+        // the odd integers. The relative order of odd or even integers does not matter. Return any array that
+        // satisfies the condition.
         int[] b = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         evenOddSort(b);
         System.out.println("Condition satisfied array is : ");
@@ -134,7 +136,8 @@ public class TwoPointersApproach {
 
 
         //Q3
-        //Given an integer array 'c' sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+        //Given an integer array 'c' sorted in non-decreasing order, return an array of the squares of each number
+        // sorted in non-decreasing order.
         int[] c = {-10, -3, -2, 1, 4, 5};
         int[] ans = square(c);
         reverseArray2(ans);

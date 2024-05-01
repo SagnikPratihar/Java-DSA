@@ -64,7 +64,6 @@ class Student {
 
     // we need a way to add the values of the above
     // properties object by object
-
     // we need one word to access every object
 
     void greeting() {
