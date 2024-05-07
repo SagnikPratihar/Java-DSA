@@ -11,7 +11,7 @@ public class ChildrenSumProperty {
 //        if (child >= root.data) root.data = child;
 //        else {
 //            if (root.left != null) root.left.data = root.data;
-//            else id(root.right != null) root.right.data = root.data;
+//            else if(root.right != null) root.right.data = root.data;
 //        }
 //        changeTree(root.left);
 //        changeTree(root.right);

